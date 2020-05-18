@@ -94,7 +94,7 @@ const Stream = createReactClass({
   },
 
   _openStreamRuleForm() {
-    this.setState( { showStreamRuleForm: true });
+    this.setState({ showStreamRuleForm: true });
   },
 
   _onDelete(stream) {
