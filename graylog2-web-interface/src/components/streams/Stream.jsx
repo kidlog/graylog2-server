@@ -85,9 +85,17 @@ const Stream = createReactClass({
   getInitialState() {
     return {
       loading: false,
+      showStreamRuleForm: false,
     };
   },
 
+  _closeStreamRuleForm() {
+    this.setState({ showStreamRuleForm: false });
+  },
+
+  _openStreamRuleForm() {
+    this.setState( { showStreamRuleForm: true });
+  },
 
   _onDelete(stream) {
     // eslint-disable-next-line no-alert
@@ -132,10 +140,6 @@ const Stream = createReactClass({
     }
   },
 
-  _onQuickAdd() {
-    this.quickAddStreamRuleForm.open();
-  },
-
   _onSaveStreamRule(streamRuleId, streamRule) {
     const { stream } = this.props;
     StreamRulesStore.create(stream.id, streamRule, () => UserNotification.success('Stream rule was created successfully.', 'Success'));
@@ -143,7 +147,7 @@ const Stream = createReactClass({
 
   render() {
     const { indexSets, stream, permissions, streamRuleTypes, user } = this.props;
-    const { loading } = this.state;
+    const { loading, showStreamRuleForm } = this.state;
 
     const isDefaultStream = stream.is_default;
     const defaultStreamTooltip = isDefaultStream
@@ -212,7 +216,7 @@ const Stream = createReactClass({
                         onDelete={this._onDelete}
                         onUpdate={this._onUpdate}
                         onClone={this._onClone}
-                        onQuickAdd={this._onQuickAdd}
+                        onQuickAdd={this._openStreamRuleForm}
                         indexSets={indexSets}
                         isDefaultStream={isDefaultStream} />
       </OverlayElement>
@@ -249,10 +253,12 @@ const Stream = createReactClass({
                           permissions={permissions}
                           isDefaultStream={isDefaultStream} />
         </div>
-        <StreamRuleForm ref={(quickAddStreamRuleForm) => { this.quickAddStreamRuleForm = quickAddStreamRuleForm; }}
-                        title="New Stream Rule"
-                        onSubmit={this._onSaveStreamRule}
-                        streamRuleTypes={streamRuleTypes} />
+        { showStreamRuleForm && (
+          <StreamRuleForm onClose={this._closeStreamRuleForm}
+                          title="New Stream Rule"
+                          onSubmit={this._onSaveStreamRule}
+                          streamRuleTypes={streamRuleTypes} />
+        ) }
       </StreamListItem>
     );
   },
