@@ -40,7 +40,7 @@ class HumanReadableStreamRule extends React.Component {
       return streamRule.field;
     }
     if (String(streamRule.type) === String(this.MATCH_INPUT)) {
-      return 'gl_source_input_id';
+      return 'gl_source_input';
     }
     return this.EMPTY_TAG;
   };
