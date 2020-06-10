@@ -9,12 +9,12 @@ import UserNotification from 'util/UserNotification';
 
 const StreamsStore = StoreProvider.getStore('Streams');
 
-const StreamRuleConnector = styled.div`
+const StreamRuleConnector = styled.div(({ theme }) => `
   margin-top: 10px;
   margin-bottom: 13px;
 
   label {
-    font-size: 12px;
+    font-size: ${theme.fonts.size.small};
   }
 
   .form-group {
@@ -30,7 +30,7 @@ const StreamRuleConnector = styled.div`
     margin-top: 2px;
     margin-bottom: 2px;
   }
-`;
+`);
 
 class MatchingTypeSwitcher extends React.Component {
   static propTypes = {

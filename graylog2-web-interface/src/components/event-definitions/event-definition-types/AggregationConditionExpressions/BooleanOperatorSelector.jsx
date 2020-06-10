@@ -5,10 +5,10 @@ import { Col, FormControl, FormGroup } from 'components/graylog';
 
 import { Select } from 'components/common';
 
-const OperatorSelector = styled.div`
+const OperatorSelector = styled.div(({ theme }) => `
   margin-bottom: 15px;
-  font-size: 14px;
-`;
+  font-size: ${theme.fonts.size.body};
+`);
 
 const BooleanOperatorSelect = styled(({ isFirstElement, ...props }) => <FormGroup {...props} />)`
   width: 100px;

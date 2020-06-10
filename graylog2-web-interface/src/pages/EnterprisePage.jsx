@@ -33,16 +33,16 @@ EnterpriseProductLink.defaultProps = {
 };
 
 const EnterpriseFeatureList = styled.ul`
-list-style-type: disc;
-padding-left: 20px;
+  list-style-type: disc;
+  padding-left: 20px;
 `;
 
-const BiggerFontSize = styled.div`
-font-size: 1.2em;
-`;
+const BiggerFontSize = styled.div(({ theme }) => `
+  font-size: ${theme.fonts.size.large};
+`);
 
 const GraylogEnterpriseHeader = styled.h2`
-margin-bottom: 10px
+  margin-bottom: 10px;
 `;
 
 const EnterprisePage = createReactClass({
@@ -124,8 +124,8 @@ const EnterprisePage = createReactClass({
                     <li><DocumentationLink page="auditlog.html" text={<strong>Audit logs</strong>} /> of Graylog user activity</li>
                     <li>
                       Alerts with <DocumentationLink page="alerts.html#filter-with-dynamic-lists-enterprise-feature"
-                                                     text={<strong>dynamic lists</strong>} /> and <DocumentationLink
-                      page="alerts.html" text={<strong>correlation engine</strong>} /> for events
+                                                     text={<strong>dynamic lists</strong>} /> and <DocumentationLink page="alerts.html"
+                                                                                                                     text={<strong>correlation engine</strong>} /> for events
                       to minimize the number of alerts that you need to create and maintain
                     </li>
                     <li>

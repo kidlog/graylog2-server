@@ -32,7 +32,7 @@ const TableWrapper: StyledComponent<{}, void, HTMLDivElement> = styled.div`
 
 const Table: StyledComponent<{}, ThemeInterface, HTMLTableElement> = styled.table(({ theme }) => `
   position: relative;
-  font-size: ${theme.fonts.size.bodySmall};
+  font-size: ${theme.fonts.size.small};
   margin-top: 0;
   margin-bottom: 60px;
   border-collapse: collapse;
@@ -112,7 +112,7 @@ const Table: StyledComponent<{}, ThemeInterface, HTMLTableElement> = styled.tabl
   }
 
   @media print {
-    font-size: 14px;
+    font-size: ${theme.fonts.size.body};
     padding-left: 0;
     min-width: 50%;
 
@@ -137,7 +137,7 @@ const TableHead: StyledComponent<{}, ThemeInterface, HTMLTableSectionElement> = 
 
   th {
     border: 0;
-    font-size: ${theme.fonts.size.bodySmall};
+    font-size: ${theme.fonts.size.small};
     font-weight: normal;
     white-space: nowrap;
     background-color: ${theme.colors.gray[90]};
