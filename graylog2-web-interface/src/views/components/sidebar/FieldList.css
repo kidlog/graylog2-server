@@ -4,7 +4,7 @@
 }
 
 :local(.fieldListItem) {
-    font-size: 12px;
+    font-size: 0.889em; /* theme.fonts.size.small */
     display: table-row;
     white-space: nowrap;
 }
