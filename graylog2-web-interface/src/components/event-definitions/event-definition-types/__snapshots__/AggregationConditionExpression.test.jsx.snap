@@ -78,9 +78,9 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "hHBaXW",
+                  "lastClassName": "eweKcm",
                   "rules": Array [
-                    "margin-bottom:15px;font-size:14px;",
+                    [Function],
                   ],
                 },
                 "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -96,7 +96,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
             >
               <Component
                 validationState={null}
@@ -12958,9 +12958,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "hHBaXW",
+                  "lastClassName": "eweKcm",
                   "rules": Array [
-                    "margin-bottom:15px;font-size:14px;",
+                    [Function],
                   ],
                 },
                 "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -12976,7 +12976,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
             >
               <Component
                 validationState={null}
@@ -20486,9 +20486,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                       "componentStyle": ComponentStyle {
                         "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                         "isStatic": false,
-                        "lastClassName": "hHBaXW",
+                        "lastClassName": "eweKcm",
                         "rules": Array [
-                          "margin-bottom:15px;font-size:14px;",
+                          [Function],
                         ],
                       },
                       "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -20504,7 +20504,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   forwardedRef={null}
                 >
                   <div
-                    className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+                    className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
                   >
                     <BooleanOperatorSelector__BooleanOperatorSelect
                       isFirstElement={true}
@@ -27722,9 +27722,9 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                   "componentStyle": ComponentStyle {
                     "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                     "isStatic": false,
-                    "lastClassName": "hHBaXW",
+                    "lastClassName": "eweKcm",
                     "rules": Array [
-                      "margin-bottom:15px;font-size:14px;",
+                      [Function],
                     ],
                   },
                   "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -27740,7 +27740,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
               forwardedRef={null}
             >
               <div
-                className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+                className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
               >
                 <BooleanOperatorSelector__BooleanOperatorSelect
                   isFirstElement={true}
@@ -35025,9 +35025,9 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "hHBaXW",
+                  "lastClassName": "eweKcm",
                   "rules": Array [
-                    "margin-bottom:15px;font-size:14px;",
+                    [Function],
                   ],
                 },
                 "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -35043,7 +35043,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
             >
               <Component
                 validationState={null}
@@ -42070,9 +42070,9 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                 "componentStyle": ComponentStyle {
                   "componentId": "BooleanOperatorSelector__OperatorSelector-sflinp-0",
                   "isStatic": false,
-                  "lastClassName": "hHBaXW",
+                  "lastClassName": "eweKcm",
                   "rules": Array [
-                    "margin-bottom:15px;font-size:14px;",
+                    [Function],
                   ],
                 },
                 "displayName": "BooleanOperatorSelector__OperatorSelector",
@@ -42088,7 +42088,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
             forwardedRef={null}
           >
             <div
-              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 hHBaXW form-inline"
+              className="BooleanOperatorSelector__OperatorSelector-sflinp-0 eweKcm form-inline"
             >
               <Component
                 validationState={null}
