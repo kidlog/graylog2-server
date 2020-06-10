@@ -42,7 +42,7 @@ export const TitleText: StyledComponent<{}, {}, HTMLDivElement> = styled.div(({ 
 export const TitleIcon: StyledComponent<{}, {}, HTMLDivElement> = styled.div(({ theme }) => `
   width: 25px;
   text-align: center;
-  font-size: ${theme.fonts.size.large};
+  font-size: ${theme.fonts.size.h3};
   cursor: pointer;
 `);
 
