@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+// eslint-disable-next-line no-restricted-imports
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
 
@@ -28,11 +29,15 @@ const NodeLoggers = createReactClass({
   },
 
   componentDidMount() {
-    MetricsActions.add(this.props.nodeId, this.metric_name);
+    const { nodeId } = this.props;
+
+    MetricsActions.add(nodeId, this.metric_name);
   },
 
   componentWillUnmount() {
-    MetricsActions.remove(this.props.nodeId, this.metric_name);
+    const { nodeId } = this.props;
+
+    MetricsActions.remove(nodeId, this.metric_name);
   },
 
   metric_name: 'org.apache.logging.log4j.core.Appender.all',
@@ -48,16 +53,17 @@ const NodeLoggers = createReactClass({
   },
 
   render() {
-    const { nodeId } = this.props;
-    const subsystems = Object.keys(this.props.subsystems)
+    const { nodeId, subsystems } = this.props;
+    const { showDetails } = this.state;
+    const subsystemKeys = Object.keys(subsystems)
       .map((subsystem) => (
         <LoggingSubsystem name={subsystem}
                           nodeId={nodeId}
                           key={`logging-subsystem-${nodeId}-${subsystem}`}
-                          subsystem={this.props.subsystems[subsystem]} />
+                          subsystem={subsystems[subsystem]} />
       ));
 
-    const logLevelMetrics = <LogLevelMetricsOverview nodeId={this.props.nodeId} />;
+    const logLevelMetrics = <LogLevelMetricsOverview nodeId={nodeId} />;
     return (
       <Row className="row-sm log-writing-node content">
         <Col md={12}>
@@ -67,9 +73,9 @@ const NodeLoggers = createReactClass({
                 <Button bsSize="sm"
                         bsStyle="primary"
                         className="trigger-log-level-metrics"
-                        onClick={() => this.setState({ showDetails: !this.state.showDetails })}>
+                        onClick={() => this.setState({ showDetails: !showDetails })}>
                   <Icon name="dashboard" />{' '}
-                  {this.state.showDetails ? 'Hide' : 'Show'} log level metrics
+                  {showDetails ? 'Hide' : 'Show'} log level metrics
                 </Button>
               </div>
               <h2>
@@ -78,9 +84,9 @@ const NodeLoggers = createReactClass({
               </h2>
             </div>
             <div className="subsystems">
-              {subsystems}
+              {subsystemKeys}
             </div>
-            {this.state.showDetails && logLevelMetrics}
+            {showDetails && logLevelMetrics}
           </IfPermitted>
         </Col>
       </Row>
