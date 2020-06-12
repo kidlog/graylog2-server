@@ -6,7 +6,8 @@ import { Alert } from 'components/graylog';
 import LoginForm from 'components/login/LoginForm';
 import LoginBox from 'components/login/LoginBox';
 
-import AuthThemeStyles from 'theme/styles/authStyles';
+import authStyles from 'theme/styles/authStyles';
+import GlobalThemeStyles from 'theme/GlobalThemeStyles';
 
 import CombinedProvider from 'injection/CombinedProvider';
 import LoadingPage from './LoadingPage';
@@ -65,7 +66,7 @@ const LoginPage = () => {
 
   return (
     <DocumentTitle title="Sign in">
-      <AuthThemeStyles />
+      <GlobalThemeStyles additionalStyles={authStyles} />
       <LoginBox>
         <legend><Icon name="group" /> Welcome to Graylog</legend>
         {formatLastError()}

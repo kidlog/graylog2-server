@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
-import { Label, OverlayTrigger, Popover } from 'components/graylog';
 
 import StoreProvider from 'injection/StoreProvider';
 
 import { LinkToNode, Spinner } from 'components/common';
+import { Label, OverlayTrigger, Popover } from 'components/graylog';
 
 import InputStateComparator from 'logic/inputs/InputStateComparator';
 
@@ -82,11 +82,11 @@ const InputStateBadge = createReactClass({
     if (sorted.length > 0) {
       const popOverText = sorted.map((state) => {
         return inputStates[state.state].map((node) => {
-          return <span><LinkToNode nodeId={node} />: {state.state}<br /></span>;
+          return <small><LinkToNode nodeId={node} />: {state.state}<br /></small>;
         });
       });
       const popover = (
-        <Popover id="inputstate-badge-details" title={`Input States for ${input.title}`} style={{ fontSize: 12 }}>
+        <Popover id="inputstate-badge-details" title={`Input States for ${input.title}`}>
           {popOverText}
         </Popover>
       );
