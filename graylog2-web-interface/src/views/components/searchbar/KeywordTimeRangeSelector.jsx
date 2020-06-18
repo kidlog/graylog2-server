@@ -28,6 +28,10 @@ const KeywordInput: StyledComponent<{}, void, *> = styled(FormControl)`
   font-size: 14px;
 `;
 
+const StyledTooltip = styled(Tooltip)`
+  white-space: nowrap;
+`;
+
 const _parseKeywordPreview = (data) => {
   const from = DateTime.fromUTCDateTime(data.from).toString();
   const to = DateTime.fromUTCDateTime(data.to).toString();
@@ -96,9 +100,9 @@ const KeywordTimeRangeSelector = ({ disabled }: Props) => {
                        validationState={error ? 'error' : null}>
               <InputGroup>
                 {error && (
-                  <Tooltip placement="top" className="in" id="tooltip-top" positionTop="-30px" allowLineBreaks={false}>
+                  <StyledTooltip placement="top" className="in" id="tooltip-top" positionTop="-30px">
                     {error}
-                  </Tooltip>
+                  </StyledTooltip>
                 )}
                 <KeywordInput type="text"
                               className="input-sm"
